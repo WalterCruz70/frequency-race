@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Frequency Race — Adverbs of Frequency</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="header">
+    <h1>Frequency Race</h1>
+    <p class="tag">Practice adverbs of frequency — 25 randomized questions</p>
+  </header>
+
+  <main id="main" class="main">
+    <section id="startScreen" class="screen active">
+      <h2>Welcome!</h2>
+      <p>Test your students with <strong>25 questions</strong>. Choose the best adverb that completes each sentence.</p>
+      <div class="controls">
+        <label for="difficulty">Questions:</label>
+        <select id="numQuestions">
+          <option value="10">10 questions</option>
+          <option value="15">15 questions</option>
+          <option value="25" selected>25 questions</option>
+        </select>
+        <label for="sound" class="chk"><input type="checkbox" id="sound" checked> Speak prompts</label>
+      </div>
+      <button id="startBtn" class="btn primary">Start Game</button>
+      <div class="small">Ready to share? Upload the folder to GitHub Pages or Netlify Drop — it's static and works instantly.</div>
+    </section>
+
+    <section id="gameScreen" class="screen hidden">
+      <div class="toprow">
+        <div class="progress">Question <span id="qNum">1</span> / <span id="qTotal">25</span></div>
+        <div class="score">Score: <span id="score">0</span></div>
+      </div>
+
+      <div id="card" class="card">
+        <div id="sentence" class="sentence">I <span class="blank">_____</span> go to bed early.</div>
+        <div id="choices" class="choices"></div>
+      </div>
+
+      <div class="controls">
+        <button id="nextBtn" class="btn secondary hidden">Next →</button>
+        <button id="quitBtn" class="btn tertiary">Quit</button>
+      </div>
+    </section>
+
+    <section id="endScreen" class="screen hidden">
+      <h2>Well done!</h2>
+      <p>Your score: <strong id="finalScore">0</strong> / <span id="finalTotal">25</span></p>
+      <p id="message" class="message"></p>
+      <div class="controls">
+        <button id="playAgain" class="btn primary">Play Again</button>
+        <button id="downloadBtn" class="btn secondary">Download Results (CSV)</button>
+      </div>
+      <div class="share">
+        <p>Share: Upload the entire folder to <strong>GitHub Pages</strong> or drag-and-drop to <strong>Netlify Drop</strong>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Made for teachers — Frequency Race. Editable content in <code>script.js</code>.</small>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
